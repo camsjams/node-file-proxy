@@ -1,6 +1,11 @@
 ## node file proxy
 
-Here is a simple demonstration of a node file proxy.
+Here is a simple demonstration of a node file proxy. This proxy would sit between your site and third-party scripts.
+
+Many marketing providers and plugin providers provide embeddable scripts, but many don't use a Content Delivery Network (CDN) so their response time is slow.
+
+They also don't cache their scripts because they need to update them from time to time (this is for Facebook pixel, Google and other big guys too).
+This can slow down the site loading and create low Chrome Lighthouse scores and general lag.
 
 ## Status
 Beta
