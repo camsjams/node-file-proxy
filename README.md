@@ -30,7 +30,7 @@ $ node index.js
 
 #### Proxy file
 
-http://localhost:3113/f?url=YOUR+URL_HERE
+http://localhost:3113/f?url=YOUR_URL_HERE
 
 #### Example:
 
