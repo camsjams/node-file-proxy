@@ -10,7 +10,7 @@ const fetchFile = async (fileUrl) => {
 };
 
 const sendProxiedFile = (buffer, headerMap, res) => {
-	res.set('content-type', headerMap.get('content-type')[0]);
+	res.set('content-type', headerMap.get('content-type'));
 	if (headerMap.has('content-encoding')) {
 		res.set('content-encoding', headerMap.get('content-encoding')[0]);
 		res.set('Accept-Ranges', 'bytes');
