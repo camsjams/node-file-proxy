@@ -2,7 +2,7 @@ const Express = require('express');
 const helmet = require('helmet');
 const fileController = require('./FileController');
 
-const PORT = process.env.port || 3113;
+const PORT = process.env.PORT || 3113;
 
 const app = new Express();
 
