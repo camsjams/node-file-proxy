@@ -10,13 +10,15 @@ const fetchFile = async (fileUrl) => {
 };
 
 const sendProxiedFile = (buffer, headerMap, res) => {
-	res.set('content-type', headerMap.get('content-type'));
+	res.set('content-type', headerMap.get('content-type')[0]);
 	if (headerMap.has('content-encoding')) {
-		res.set('content-encoding', headerMap.get('content-encoding'));
+		res.set('content-encoding', headerMap.get('content-encoding')[0]);
+		res.set('Accept-Ranges', 'bytes');
+		res.set('Vary', 'Accept-Encoding');
 	}
 
 	if (headerMap.has('content-length')) {
-		res.set('content-length', headerMap.get('content-length'));
+		res.set('content-length', headerMap.get('content-length')[0]);
 	}
 
 	res.set('cache-control', `public, max-age=${TTL}, stale-while-revalidate=${TTL}`);
